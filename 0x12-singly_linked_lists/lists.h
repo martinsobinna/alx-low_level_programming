@@ -2,19 +2,19 @@
 #define LISTS_H
 
 /**
- * struct list_s - This is singly linked list
- * @strz: string - (malloc'ed string)
- * @lenz: length of the string
- * @nextz: points to the next node
+ * struct list_s -This is singly linked list
+ * @str: string - (malloc'ed string)
+ * @len: This length of the string
+ * @next: This points to the next node
  *
  * Description: singly linked list node structure
  * for Holberton project
  */
 typedef struct list_s
 {
-	char *strz;
-	unsigned int lenz;
-	struct list_s *nextz;
+	char *str;
+	unsigned int len;
+	struct list_s *next;
 } list_t;
 
 size_t print_list(const list_t *h);
@@ -24,3 +24,4 @@ list_t *add_node_end(list_t **head, const char *str);
 void free_list(list_t *head);
 
 #endif
+
